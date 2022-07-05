@@ -1,7 +1,10 @@
 package beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Vehicle {
-    private String name;
+    private String name = "Audi";
 
     public Vehicle(){
         System.out.println("Vehicle bean created by Spring");
