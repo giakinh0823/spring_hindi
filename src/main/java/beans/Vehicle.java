@@ -3,6 +3,9 @@ package beans;
 public class Vehicle {
     private String name;
 
+    public Vehicle(){
+        System.out.println("Vehicle bean created by Spring");
+    }
     public String getName() {
         return name;
     }
