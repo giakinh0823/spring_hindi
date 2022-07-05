@@ -1,12 +1,17 @@
 package beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import services.VehicleService;
 
+@Component
 public class Vehicle {
-    private String name;
+    private String name = "Audi";
+    private final VehicleService vehicleService;
 
-    public Vehicle(){
-        System.out.println("Vehicle bean created by Spring");
+    @Autowired
+    public Vehicle(VehicleService vehicleService){
+        this.vehicleService = vehicleService;
     }
     public String getName() {
         return name;
@@ -16,4 +21,7 @@ public class Vehicle {
         this.name = name;
     }
 
+    public VehicleService getVehicleService() {
+        return vehicleService;
+    }
 }
