@@ -7,20 +7,20 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProjectConfig {
 
-    @Bean
+    @Bean(name="bmw")
     public Vehicle vehicle1(){
         Vehicle vehicle = new Vehicle();
         vehicle.setName("BMW");
         return vehicle;
     }
 
-    @Bean
+    @Bean(value="audi")
     public Vehicle vehicle2(){
         Vehicle vehicle = new Vehicle();
         vehicle.setName("AUDI");
         return vehicle;
     }
-    @Bean
+    @Bean("vin")
     public Vehicle vehicle3(){
         Vehicle vehicle = new Vehicle();
         vehicle.setName("VIN");
